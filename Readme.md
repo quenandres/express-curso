@@ -10,3 +10,7 @@
 - Patch: Indicamos especificamente los cambios que queremos hacer
 
 Estos metodos ayudan a indicarle al servidor que queremos hacer.
+
+### Http Methods en express
+
+- REST: Recomendaciones de como se pueden crear las API.
