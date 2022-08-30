@@ -3,9 +3,20 @@ const express = require('express');
 const app = express(); //Server
 
 app.get('/', (req, res) => {
-    res.sendFile('./static/index.html',{
-        root: __dirname
-    });
+    res.send('Hello world');
+});
+
+app.get('/about', (req, res) => {
+    res.send('about');
+});
+
+app.get('/weather', (req, res) => {
+    res.send('weather');
+});
+
+
+app.use((req, res) => { //
+    res.status(404).send('No se encontro la pagina');
 });
 
 app.listen(3000);
