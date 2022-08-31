@@ -2,26 +2,33 @@ const express = require('express');
 
 const app = express(); //Server
 
-app.get('/products', (req, res) => {
-    res.send('Lista de productos');
-});
+app.get('/', (req, res) => {
+    res.send('Hello world');
+})
 
 
-app.post('/products', (req, res) => {
-    res.send('creando productos');
-});
+app.get('/mi-archivo', (req, res) => {
+    res.sendFile('./logo.jpg',{
+        root: __dirname
+    });
+})
 
 
-app.put('/products', (req, res) => {
-    res.send('actualizando producto');
-});
+app.get('/user', (req, res) => {
+    res.json({
+        name: "quenandres",
+        lastname: "Maul",
+        age: 27,
+        points: [1,2,3],
+        addres: {
+            city: "new york",
+            street:"some street 123"
+        }
+    });
+})
 
-app.delete('/products', (req, res) => {
-    res.send('eliminando producto');
-});
-
-app.patch('/products', (req, res) => {
-    res.send('actualizando una parte del producto');
+app.get('/isAlive', (req, res) => {
+    res.sendStatus(204);
 });
 
 app.listen(3000);

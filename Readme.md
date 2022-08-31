@@ -1,7 +1,7 @@
 # Curso de express
 
 
-### Http Methods
+## Http Methods
 #### *Http Verbs*
 - Get: Obtiene algo del servidor
 - Post: El cliente envia datos al servidor para que este los guarde.
@@ -11,6 +11,11 @@
 
 Estos metodos ayudan a indicarle al servidor que queremos hacer.
 
-### Http Methods en express
+## Http Methods en express
 
 - REST: Recomendaciones de como se pueden crear las API.
+
+
+## Http Response
+- Codigos de HTTP
+- libreria express
