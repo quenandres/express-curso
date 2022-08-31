@@ -19,3 +19,28 @@ Estos metodos ayudan a indicarle al servidor que queremos hacer.
 ## Http Response
 - Codigos de HTTP
 - libreria express
+
+## Request Body
+El cliente puede enviarle distintos tipos de datos al servidor.
+- Texto.
+- Objeto json.
+- Archivo.
+- Datos de un formulario.
+
+_Objeto json_:
+Header
+    - Datos especificos de la solicitud (status, format)
+Body
+    - Contenido de la solicitud
+
+
+```js
+app.use(express.text());
+```
+Utilizado para que express pueda interpretar texto
+
+```js
+app.use(express.json());
+```
+Estos metodos se tienen que poner antes de ir a los metodos de las rutas para que se ejecuten.
+Es importante añadir cabeceras en las aplicaciones.
