@@ -102,3 +102,6 @@ app.use((req, res, next) => {
 });
 ```
 El metodo _next()_ es utilizado para ejecutar el siguiente metodo ya sea de ruta o de middleware.
+
+# Introducción a Middlewares
+Los middleware funcionan de manera secuencial, si ponemos las rutas antes del middleware, la ruta no valdra lo que se valide en los middleware.
