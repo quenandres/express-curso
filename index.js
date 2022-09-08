@@ -2,8 +2,18 @@ const express = require('express');
 
 const app = express(); //Server
 
-app.get('/hello/:username', (req, res) => {
+app.get('/search', (req, res) => {
+    console.log(req.query);
+    if( req.query.q === 'javascript books' ) {
+        res.send('Lista de libros de js');
+    } else {
+        res.send('Lista de libros normales');
+    }
+});
 
+
+app.get('/hello/:username', (req, res) => {
+    console.log(req.query);
     res.send(`Hello ${req.params.username.toUpperCase()}`);
 });
 

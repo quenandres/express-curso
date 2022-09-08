@@ -65,3 +65,20 @@ El usuario fazt tiene 50 años
 ```
 
 
+# Queries
+Queries por ruta se pueden enviar multiples parametros, concatenados por _&_
+```
+http://localhost:3000/search?q=javascript%20books
+```
+Ruta:
+```js
+app.get('/search', (req, res) => {
+    if( req.query.q === 'javascript books' ) {
+        res.send('Lista de libros de js');
+    } else {
+        res.send('Lista de libros normales');
+    }
+});
+```
+
+Si se envia mas de una vez el mismo parametro este se agregara a un solo array.
