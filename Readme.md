@@ -82,3 +82,12 @@ app.get('/search', (req, res) => {
 ```
 
 Si se envia mas de una vez el mismo parametro este se agregara a un solo array.
+
+# Metodo all
+En express existe una ruta especial _all_ esta ruta se podra acceder desde cualquier metodo que le enviemos, GET, POST etc.
+
+```js
+app.all('/info', (req, res ) => {
+    res.send('server info');
+});
+```

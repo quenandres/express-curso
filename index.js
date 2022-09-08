@@ -2,6 +2,10 @@ const express = require('express');
 
 const app = express(); //Server
 
+app.all('/info', (req, res ) => {
+    res.send('server info');
+});
+
 app.get('/search', (req, res) => {
     console.log(req.query);
     if( req.query.q === 'javascript books' ) {
