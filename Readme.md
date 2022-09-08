@@ -91,3 +91,14 @@ app.all('/info', (req, res ) => {
     res.send('server info');
 });
 ```
+
+# Middlewares
+Son funciones intermedias, que pueden utilizar tanto el request como el response para hacer las operaciones necesarias según su funcionamiento.
+```js
+//Middleware
+app.use((req, res, next) => {
+    console.log(`Ruta: ${req.url}, Metodo: ${req.method}`);
+    next();
+});
+```
+El metodo _next()_ es utilizado para ejecutar el siguiente metodo ya sea de ruta o de middleware.
