@@ -44,3 +44,24 @@ app.use(express.json());
 ```
 Estos metodos se tienen que poner antes de ir a los metodos de las rutas para que se ejecuten.
 Es importante añadir cabeceras en las aplicaciones.
+
+Otra manera de extraer parametros: _{params: {x, y}}_
+```js
+app.get('/restar/:x/:y', ({params: {x, y}}, res) => {
+    res.send(`Result: ${parseInt(x) - parseInt(y)}`);
+});
+```
+
+Se puede enviar mas de un parametro
+
+```js
+app.get('/nombre/:nombre/age/:age', (req, res) => {
+    res.send(`El usuario ${req.params.nombre} tiene ${req.params.age} años`);
+});
+```
+rta:
+```bash
+El usuario fazt tiene 50 años
+```
+
+
