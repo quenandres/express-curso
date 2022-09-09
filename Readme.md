@@ -105,3 +105,8 @@ El metodo _next()_ es utilizado para ejecutar el siguiente metodo ya sea de ruta
 
 # Introducción a Middlewares
 Los middleware funcionan de manera secuencial, si ponemos las rutas antes del middleware, la ruta no valdra lo que se valide en los middleware.
+
+
+# Middleware interceptor
+__morgan__ es un paquete de middleware que funciona como logger
+Existen middlewares para subir imagenes, para comprobar si el usuario tiene una cookie, para validar datos.

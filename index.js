@@ -1,12 +1,9 @@
 const express = require('express');
-
+const morgan = require('morgan');
 const app = express(); //Server
 
 //Middleware
-app.use((req, res, next) => {
-    console.log(`Ruta: ${req.url}, Metodo: ${req.method}`);
-    next();
-});
+app.use(morgan('dev'));
 
 app.get('/profile', (req, res) => {
     res.send('profile page');
