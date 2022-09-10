@@ -3,13 +3,24 @@ const morgan = require('morgan');
 const app = express();
 
 app.use(morgan('dev'));
+app.use(express.json()); // Middleware para que interprete json
+
+const products = [
+    {
+        id: 1,
+        name: "Laptop",
+        price: 5100
+    }
+];
 
 app.get('/products', (req, res) => {
-    res.send('Obteniendo products');
+    res.json(products);    
 });
 
-app.post('/products', (req, res) => {
-    res.send('creando product');
+app.post('/products', (req, res) => {    
+    const newProduct = {...req.body, "id": products.length + 1};
+    products.push(newProduct);
+    res.json(newProduct);
 });
 
 app.put('/products', (req, res) => {
