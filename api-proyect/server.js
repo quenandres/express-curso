@@ -31,8 +31,16 @@ app.delete('/products', (req, res) => {
     res.send('Eliminando product');
 });
 
-app.get('/products:id', (req, res) => {
-    res.send('Obteniendo product');
+app.get('/products/:id', (req, res) => {
+    try {
+        const productFound = products.find(product => product.id === parseInt(req.params.id));
+        if( !productFound ) {
+            throw new Error('Product not found');
+        }
+        res.json(productFound);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }    
 });
 
 app.listen(3000);
