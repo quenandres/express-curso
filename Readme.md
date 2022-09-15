@@ -113,3 +113,20 @@ Existen middlewares para subir imagenes, para comprobar si el usuario tiene una 
 
 # REST API - Explication
 Creacion de rutas del api de _/products_
+
+# Express Settings
+
+Podemos definir valores en la aplicacion
+```js
+app.set('port', 3000);
+```
+
+Para utilizarla en la aplicación accedemos a ella de la siguiente manera.
+```js
+app.get('port');
+```
+
+Para que el enrutador dirija directamente a la ruta debida(mayus, minus).
+```js
+app.set('case sensitive routing', true);
+```

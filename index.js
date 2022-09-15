@@ -5,7 +5,13 @@ const app = express(); //Server
 //Middleware
 app.use(morgan('dev'));
 
-app.get('/profile', (req, res) => {
+// Settings
+app.set('appName', 'Express Course');
+app.set('port', 3000);
+app.set('case sensitive routing', true);
+
+// Routes
+app.get('/Profile', (req, res) => {
     res.send('profile page');
 });
 
@@ -25,5 +31,5 @@ app.get('/dashboard', (req, res) => {
     res.send('Dashboard page');
 });
 
-app.listen(3000);
-console.log('server on port 3000');
+app.listen(app.get('port'));
+console.log(`server ${app.get('appName')} on port ${app.get('port')}`);
