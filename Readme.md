@@ -130,3 +130,5 @@ Para que el enrutador dirija directamente a la ruta debida(mayus, minus).
 ```js
 app.set('case sensitive routing', true);
 ```
+
+# Static files
