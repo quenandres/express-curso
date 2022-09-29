@@ -154,3 +154,6 @@ app.use(HomeRoutes);
 app.use(UserRoutes);
 ```
 
+# Template engine
+
+Uso de ejs como motor de plantillas para mostrar pantallas.
