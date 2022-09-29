@@ -132,3 +132,8 @@ app.set('case sensitive routing', true);
 ```
 
 # Static files
+
+
+# Express Router
+Cuando la aplicacion crece es mejor separar las rutas con el module especial de express Router
+
