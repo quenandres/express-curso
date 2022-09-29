@@ -1,11 +1,12 @@
-function UserRoutes(app) {
-    app.get('/Profile', (req, res) => {
-        res.send('profile page');
-    });
-    
-    app.get('/Username', (req, res) => {
-        res.send('User name');
-    });
-}
+const { Router } = require('express');
+const router = Router();
 
-module.exports = UserRoutes;
+router.get('/Profile', (req, res) => {
+    res.send('profile page');
+});
+
+router.get('/Username', (req, res) => {
+    res.send('User name');
+});
+
+module.exports = router;

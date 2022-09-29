@@ -137,3 +137,20 @@ app.set('case sensitive routing', true);
 # Express Router
 Cuando la aplicacion crece es mejor separar las rutas con el module especial de express Router
 
+userRoutes.js
+```js
+const { Router } = require('express');
+const router = Router();
+```
+
+server.js
+```js
+const HomeRoutes = require('./routes/home');
+const UserRoutes = require('./routes/user');
+------
+
+// Routes
+app.use(HomeRoutes);
+app.use(UserRoutes);
+```
+
