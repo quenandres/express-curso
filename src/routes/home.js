@@ -1,13 +1,17 @@
 const { Router } = require('express');
 const router = Router();
 
+router.get('/', (req, res) => {
+    res.render('index', { title: 'indexPage'});
+});
+
 router.get('/about', (req, res) => {
-    const title = 'Mi pagina creada desde express 2';
-    res.render('index', { title });
+    
+    res.render('about');
 });
 
 router.get('/dashboard', (req, res) => {
-    res.send('Dashboard page');
+    res.render('dashboard');
 });
 
 module.exports = router;
