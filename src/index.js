@@ -2,7 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const app = express(); //Server
 const path = require('path');
+const connectDB = require('./db');
 require('ejs');
+
+connectDB();
 
 const HomeRoutes = require('./routes/home');
 const UserRoutes = require('./routes/user');

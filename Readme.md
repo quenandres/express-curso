@@ -161,3 +161,5 @@ Uso de ejs como motor de plantillas para mostrar pantallas.
 # EJS Partials
 
 Creación de plantillas y parciales para compartir entre todas las paginas.
+
+# Base de datos
